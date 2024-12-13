@@ -27,7 +27,7 @@ Si l'objet passé à cette fonction est une instance de `pathlib.Path`, la
 fonction le convertit en une chaîne de caractères et renvoie cette dernière. Si
 l'objet est une chaîne de caractères, la fonction renvoie l'objet.
 
-#### Paramètes et exception
+#### Paramètres et exception
 
 Les fonctions ci-dessus ont les mêmes paramètres.
 
