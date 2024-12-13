@@ -41,11 +41,18 @@ Si l'argument `some_path` est `None` et l'argument `is_none_allowed` est
 
 ### Dépendances
 
-Exécutez cette commande pour installer les dépendances nécessaires au
-développement.
+Cette commande installe les dépendances nécessaires au développement.
 
 ```
 pip install -r requirements-dev.txt
+```
+
+### Tests automatiques
+
+Cette commande exécute les tests automatiques.
+
+```
+pytest tests
 ```
 
 ## ENGLISH
@@ -88,8 +95,16 @@ functions return `None`. However, if `is_none_allowed` is `False`, a
 
 ### Dependencies
 
-Execute this command to install the dependencies necessary for development.
+This command installs the dependencies necessary for development.
 
 ```
 pip install -r requirements-dev.txt
+```
+
+### Automated tests
+
+This command executes the automated tests.
+
+```
+pytest tests
 ```
