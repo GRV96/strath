@@ -47,7 +47,7 @@ def ensure_path_is_str(some_path, is_none_allowed):
 	"""
 	If argument some_path is a pathlib.Path instance, this function converts
 	it to a string, which it returns. If some_path is a string, this function
-	returns some_path. Otherwise, a TypeError is raised.
+	returns some_path.
 
 	If argument some_path is None and argument is_none_allowed is True, this
 	function returns None. However, if is_none_allowed is False, a TypeError is
