@@ -42,13 +42,27 @@ faux (`False`), une exception `TypeError` est levée.
 Si l'argument `some_path` n'est pas `None` ni une instance de `str` ou de
 `pathlib.Path`, une exception `TypeError` est levée.
 
-### Démo
+### Démos
 
-La démo contient des exemples d'appel des fonctions de `strath`. Exécutez-la
-avec la commande suivante.
+`demos/demo_fnc_calls.py` contient des exemples d'appel des fonctions de
+`strath`.
 
 ```
-python demo.py
+python demos/demo_fnc_calls.py
+```
+
+`demos/demo_pathlib_to_str.py` contient une fonction qui utilise une chaîne de
+caractères, mais ne connaît pas le type de son argument.
+
+```
+python demos/demo_pathlib_to_str.py .. . .github/workflows demos strath tests
+```
+
+`demos/demo_str_to_pathlib.py` contient une fonction qui utilise une instance
+de `pathlib.Path`, mais ne connaît pas le type de son argument.
+
+```
+python demos/demo_str_to_pathlib.py demos/the_planets.txt
 ```
 
 ### Dépendances
@@ -110,13 +124,26 @@ the functions return `None`. However, if `is_none_allowed` is `False`, a
 If argument `some_path` is not `None` nor an instance of `str` or
 `pathlib.Path`, a `TypeError` is raised.
 
-### Demo
+### Demos
 
-The demo contains examples of calling `strath`'s functions. Run it with the
-following command.
+`demos/demo_fnc_calls.py` contains examples of calling `strath`'s functions.
 
 ```
-python demo.py
+python demos/demo_fnc_calls.py
+```
+
+`demos/demo_pathlib_to_str.py` contains a function that uses a string,
+but does not know its argument's type.
+
+```
+python demos/demo_pathlib_to_str.py .. . .github/workflows demos strath tests
+```
+
+`demos/demo_str_to_pathlib.py` contains a function that uses a `pathlib.Path`
+instance, but does not know its argument's type.
+
+```
+python demos/demo_str_to_pathlib.py demos/the_planets.txt
 ```
 
 ### Dependencies

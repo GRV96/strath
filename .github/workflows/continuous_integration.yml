@@ -18,10 +18,14 @@ jobs:
         run: pip3 install --no-cache-dir -r requirements-dev.txt
       - name: Execute unit tests
         run: pytest tests
-  test_demo_no_error:
+  test_demos_no_error:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
-      - name: Test the demo
-        run: python3 demo.py
+      - name: Test the function call demo
+        run: python3 demos/demo_fnc_calls.py
+      - name: Test the string to pathlib demo
+        run: python3 demos/demo_str_to_pathlib.py demos/the_planets.txt
+      - name: Test the pathlib to string demo
+        run: python3 demos/demo_pathlib_to_str.py .. . .github/workflows demos strath tests
