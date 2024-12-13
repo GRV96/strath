@@ -35,9 +35,9 @@ Les fonctions ci-dessus ont les mêmes paramètres.
 
 `is_none_allowed` (`bool`): determine si `some_path` peut être `None`.
 
-Si l'argument `some_path` est `None` et l'argument `is_none_allowed` est
-`True`, les fonctions renvoient `None`. Par contre, si `is_none_allowed` est
-`False`, une exception `TypeError` est levée.
+Si l'argument `some_path` est `None` et l'argument `is_none_allowed` est vrai
+(`True`), les fonctions renvoient `None`. Par contre, si `is_none_allowed` est
+faux (`False`), une exception `TypeError` est levée.
 
 ### Dépendances
 
