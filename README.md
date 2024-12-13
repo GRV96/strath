@@ -39,6 +39,15 @@ Si l'argument `some_path` est `None` et l'argument `is_none_allowed` est vrai
 (`True`), les fonctions renvoient `None`. Par contre, si `is_none_allowed` est
 faux (`False`), une exception `TypeError` est levée.
 
+### Démo
+
+La démo contient des exemples d'appel des fonctions de `strath`. Exécutez-la
+avec la commande suivante.
+
+```
+python demo.py
+```
+
 ### Dépendances
 
 Cette commande installe les dépendances nécessaires au développement.
@@ -94,6 +103,15 @@ The above functions have the same parameters.
 If argument `some_path` is `None` and argument `is_none_allowed` is `True`, the
 functions return `None`. However, if `is_none_allowed` is `False`, a
 `TypeError` is raised.
+
+### Demo
+
+The demo contains examples of calling `strath`'s functions. Run it with the
+following command.
+
+```
+python demo.py
+```
 
 ### Dependencies
 
