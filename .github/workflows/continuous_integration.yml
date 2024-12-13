@@ -23,7 +23,5 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
-      - name: Intall dependencies
-        run: pip3 install --no-cache-dir -r requirements.txt
       - name: Test the demo
         run: python3 .github/workflows/test_demo_no_error.py
