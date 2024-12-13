@@ -76,7 +76,7 @@ In Python, it is possible to represent file paths with character strings
 different ways, a developer might need to verify the objects' type and to
 perform conversions.
 
-Library `strath` allows to do both tasks in one function call.
+Library `strath` allows to do both tasks with one function call.
 
 ### Content
 
