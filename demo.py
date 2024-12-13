@@ -14,10 +14,10 @@ def _print_path_and_type(message, some_path):
 	print(f"{message}: {some_path} {type(some_path)}")
 
 
-def _test_none_path(message, fnc, allow_none):
+def _test_none_path(message, fnc, is_none_allowed):
 	print(message)
 	try:
-		none_path = fnc(None, allow_none)
+		none_path = fnc(None, is_none_allowed)
 		print(f"Return value: {none_path}")
 	except TypeError:
 		print("TypeError raised")
