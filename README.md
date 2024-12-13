@@ -33,7 +33,7 @@ Les fonctions ci-dessus ont les mêmes paramètres.
 
 `some_path` (`str` or `pathlib.Path`): le chemin d'un fichier ou d'un dossier.
 
-`is_none_allowed` (`bool`): determine si `some_path` peut être `None`.
+`is_none_allowed` (`bool`): détermine si `some_path` peut être `None`.
 
 Si l'argument `some_path` est `None` et l'argument `is_none_allowed` est vrai
 (`True`), les fonctions renvoient `None`. Par contre, si `is_none_allowed` est
