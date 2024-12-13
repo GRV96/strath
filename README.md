@@ -18,14 +18,14 @@ fonction.
 #### `ensure_path_is_pathlib`
 
 Si l'objet passé à cette fonction est une chaîne de caractères, la fonction le
-convertit en une instance de `pathlib.Path` et la renvoie. Si l'objet est une
-instance de `pathlib.Path`, la fonction renvoie l'objet.
+convertit en une instance de `pathlib.Path` et renvoie cette dernière. Si
+l'objet est une instance de `pathlib.Path`, la fonction renvoie l'objet.
 
 #### `ensure_path_is_str`
 
 Si l'objet passé à cette fonction est une instance de `pathlib.Path`, la
-fonction le convertit en chaîne de caractères et la renvoie. Si l'objet est une
-chaîne de caractères, la fonction renvoie l'objet.
+fonction le convertit en une chaîne de caractères et renvoie cette dernière. Si
+l'objet est une chaîne de caractères, la fonction renvoie l'objet.
 
 #### Paramètes et exception
 
