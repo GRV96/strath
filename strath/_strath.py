@@ -16,12 +16,14 @@ def ensure_path_is_pathlib(some_path, is_none_allowed):
 	"""
 	If argument some_path is a string, this function converts it to a
 	pathlib.Path instance, which it returns. If some_path is a pathlib.Path
-	instance, this function returns some_path. Otherwise, a TypeError is
-	raised.
+	instance, this function returns some_path.
 
 	If argument some_path is None and argument is_none_allowed is True, this
 	function returns None. However, if is_none_allowed is False, a TypeError is
 	raised.
+
+	If argument some_path is not None nor an instance of str or pathlib.Path,
+	a TypeError is raised.
 
 	Parameters:
 		some_path (str or pathlib.Path): the path to a file or directory.
@@ -50,6 +52,9 @@ def ensure_path_is_str(some_path, is_none_allowed):
 	If argument some_path is None and argument is_none_allowed is True, this
 	function returns None. However, if is_none_allowed is False, a TypeError is
 	raised.
+
+	If argument some_path is not None nor an instance of str or pathlib.Path,
+	a TypeError is raised.
 
 	Parameters:
 		some_path (str or pathlib.Path): the path to a file or directory.
