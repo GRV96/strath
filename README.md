@@ -47,6 +47,8 @@ Cette commande installe les dépendances nécessaires au développement.
 pip install -r requirements-dev.txt
 ```
 
+Cependant, l'usage de `strath` ne requiert aucune dépendance.
+
 ### Tests automatiques
 
 Cette commande exécute les tests automatiques.
@@ -100,6 +102,8 @@ This command installs the dependencies necessary for development.
 ```
 pip install -r requirements-dev.txt
 ```
+
+However, using `strath` does not require dependencies.
 
 ### Automated tests
 
