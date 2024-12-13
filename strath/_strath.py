@@ -8,7 +8,7 @@ _ERROR_MSG_NONE =\
 
 
 def _raise_type_error(is_none_allowed):
-	message = _ERROR_MSG if is_none_allowed else _ERROR_MSG_NONE
+	message = _ERROR_MSG_NONE if is_none_allowed else _ERROR_MSG
 	raise TypeError(message)
 
 
