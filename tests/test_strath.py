@@ -10,6 +10,7 @@ from strath import\
 	ensure_path_is_pathlib,\
 	ensure_path_is_str
 sys.path.remove(repo_root)
+del repo_root
 
 
 _ERROR_MSG =\
@@ -74,11 +75,21 @@ def test_none_disallowed_str():
 		ensure_path_is_str(None, False)
 
 
-def test_incorrect_type_none_allowed():
+def test_incorrect_type_none_allowed_pathlib():
+	with pytest.raises(TypeError, match=_ERROR_MSG_NONE):
+		ensure_path_is_pathlib(3.14159, True)
+
+
+def test_incorrect_type_none_disallowed_pathlib():
+	with pytest.raises(TypeError, match=_ERROR_MSG):
+		ensure_path_is_pathlib(3.14159, False)
+
+
+def test_incorrect_type_none_allowed_str():
 	with pytest.raises(TypeError, match=_ERROR_MSG_NONE):
 		ensure_path_is_str(3.14159, True)
 
 
-def test_incorrect_type_none_disallowed():
+def test_incorrect_type_none_disallowed_str():
 	with pytest.raises(TypeError, match=_ERROR_MSG):
 		ensure_path_is_str(3.14159, False)
