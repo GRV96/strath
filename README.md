@@ -51,18 +51,18 @@ Si l'argument `some_path` n'est pas `None` ni une instance de `str` ou de
 python demos/demo_fnc_calls.py
 ```
 
-`demos/demo_str_to_pathlib.py` contient une fonction qui utilise une instance
-de `pathlib.Path`, mais ignore le type de son argument.
-
-```
-python demos/demo_str_to_pathlib.py demos/the_planets.txt
-```
-
 `demos/demo_pathlib_to_str.py` contient une fonction qui utilise une chaîne de
 caractères, mais ignore le type de son argument.
 
 ```
 python demos/demo_pathlib_to_str.py .. . .github/workflows demos strath tests
+```
+
+`demos/demo_str_to_pathlib.py` contient une fonction qui utilise une instance
+de `pathlib.Path`, mais ignore le type de son argument.
+
+```
+python demos/demo_str_to_pathlib.py demos/the_planets.txt
 ```
 
 ### Dépendances
@@ -132,18 +132,18 @@ If argument `some_path` is not `None` nor an instance of `str` or
 python demos/demo_fnc_calls.py
 ```
 
-`demos/demo_str_to_pathlib.py` contains a function that uses a `pathlib.Path`
-instance, but does not know its argument's type.
-
-```
-python demos/demo_str_to_pathlib.py demos/the_planets.txt
-```
-
 `demos/demo_pathlib_to_str.py` contains a function that uses a string,
 but does not know its argument's type.
 
 ```
 python demos/demo_pathlib_to_str.py .. . .github/workflows demos strath tests
+```
+
+`demos/demo_str_to_pathlib.py` contains a function that uses a `pathlib.Path`
+instance, but does not know its argument's type.
+
+```
+python demos/demo_str_to_pathlib.py demos/the_planets.txt
 ```
 
 ### Dependencies
