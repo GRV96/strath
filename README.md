@@ -17,15 +17,15 @@ fonction.
 
 #### `ensure_path_is_pathlib`
 
-Si l'objet passé à cette fonction est une chaîne de caractères, la fonction le
-convertit en une instance de `pathlib.Path` et renvoie cette dernière. Si
-l'objet est une instance de `pathlib.Path`, la fonction renvoie l'objet.
+Si le chemin est une chaîne de caractères, cette fonction le convertit en une
+instance de `pathlib.Path` et renvoie cette dernière. Si le chemin est une
+instance de `pathlib.Path`, la fonction renvoie le chemin.
 
 #### `ensure_path_is_str`
 
-Si l'objet passé à cette fonction est une instance de `pathlib.Path`, la
-fonction le convertit en une chaîne de caractères et renvoie cette dernière. Si
-l'objet est une chaîne de caractères, la fonction renvoie l'objet.
+Si le chemin est une instance de `pathlib.Path`, cette fonction le convertit en
+une chaîne de caractères et renvoie cette dernière. Si le chemin est une chaîne
+de caractères, la fonction renvoie le chemin.
 
 #### Paramètres et exception `TypeError`
 
@@ -41,6 +41,9 @@ faux (`False`), une exception `TypeError` est levée.
 
 Si l'argument `some_path` n'est pas `None` ni une instance de `str` ou de
 `pathlib.Path`, une exception `TypeError` est levée.
+
+Pour plus d'informations, consultez la documentation des fonctions et les démos
+dans le dépôt de code source.
 
 ### Démos
 
@@ -99,15 +102,15 @@ Library `strath` allows to do both tasks with one function call.
 
 #### `ensure_path_is_pathlib`
 
-If the object passed to this function is a string, the function converts it to
-a `pathlib.Path` instance, which it returns. If the object is a `pathlib.Path`
-instance, the function returns the object.
+If the path is a string, this function converts it to a `pathlib.Path`
+instance, which it returns. If the path is a `pathlib.Path` instance, the
+function returns the path.
 
 #### `ensure_path_is_str`
 
-If the object passed to this function is a `pathlib.Path` instance, the
-function converts it to a string, which it returns. If the object is a string,
-the function returns the object.
+If the path is a `pathlib.Path` instance, this function converts it to a
+string, which it returns. If the path is a string, the function returns the
+path.
 
 #### Parameters and exception `TypeError`
 
@@ -123,6 +126,9 @@ the functions return `None`. However, if `is_none_allowed` is `False`, a
 
 If argument `some_path` is not `None` nor an instance of `str` or
 `pathlib.Path`, a `TypeError` is raised.
+
+For more information, consult the functions' documentation and the demos in the
+source code repository.
 
 ### Demos
 
