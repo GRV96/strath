@@ -39,6 +39,14 @@ Si l'argument `some_path` est `None` et l'argument `is_none_allowed` est
 `True`, les fonctions renvoient `None`. Par contre, si `is_none_allowed` est
 `False`, une exception `TypeError` est levée.
 
+### Dépendances
+
+Exécutez cette commande pour installer les dépendances.
+
+```
+pip install -r requirements-dev.txt
+```
+
 ## ENGLISH
 
 This library helps ensuring that a file path is of type `str` or
@@ -76,3 +84,11 @@ The above functions have the same parameters.
 If argument `some_path` is `None` and argument `is_none_allowed` is `True`, the
 functions return `None`. However, if `is_none_allowed` is `False`, a
 `TypeError` is raised.
+
+### Dependencies
+
+Execute this command to install the dependencies.
+
+```
+pip install -r requirements-dev.txt
+```
