@@ -63,7 +63,7 @@ This library helps ensuring that a file path is of type `str` or
 In Python, it is possible to represent file paths with character strings
 (`str`) or `pathlib.Path` instances. Since these types are used in very
 different ways, a developer might need to verify the objects' type and to
-perfrom conversions.
+perform conversions.
 
 Library `strath` allows to do both tasks in one function call.
 
