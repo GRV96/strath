@@ -27,7 +27,7 @@ Si l'objet passé à cette fonction est une instance de `pathlib.Path`, la
 fonction le convertit en une chaîne de caractères et renvoie cette dernière. Si
 l'objet est une chaîne de caractères, la fonction renvoie l'objet.
 
-#### Paramètres et exception
+#### Paramètres et exception `TypeError`
 
 Les fonctions ci-dessus ont les mêmes paramètres.
 
@@ -38,6 +38,9 @@ Les fonctions ci-dessus ont les mêmes paramètres.
 Si l'argument `some_path` est `None` et l'argument `is_none_allowed` est vrai
 (`True`), les fonctions renvoient `None`. Par contre, si `is_none_allowed` est
 faux (`False`), une exception `TypeError` est levée.
+
+Si l'argument `some_path` n'est pas `None` ni une instance de `str` ou de
+`pathlib.Path`, une exception `TypeError` est levée.
 
 ### Démo
 
@@ -92,7 +95,7 @@ If the object passed to this function is a `pathlib.Path` instance, the
 function converts it to a string, which it returns. If the object is a string,
 the function returns the object.
 
-#### Parameters and exception
+#### Parameters and exception `TypeError`
 
 The above functions have the same parameters.
 
@@ -100,9 +103,12 @@ The above functions have the same parameters.
 
 `is_none_allowed` (`bool`): determines whether `some_path` can be `None`.
 
-If argument `some_path` is `None` and argument `is_none_allowed` is `True`, the
-functions return `None`. However, if `is_none_allowed` is `False`, a
+If argument `some_path` is `None` and argument `is_none_allowed` is `True`,
+the functions return `None`. However, if `is_none_allowed` is `False`, a
 `TypeError` is raised.
+
+If argument `some_path` is not `None` nor an instance of `str` or
+`pathlib.Path`, a `TypeError` is raised.
 
 ### Demo
 
