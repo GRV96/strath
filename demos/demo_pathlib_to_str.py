@@ -16,7 +16,9 @@ def _sys_path_contains(dir_path):
 	return dir_path in sys.path
 
 
-print("Are these paths in sys.path?")
+print("sys.path\n" + "\n".join(sys.path))
+
+print("\nAre these paths in sys.path?")
 for dir_path in sys.argv[1:]:
 	dir_path = Path(dir_path).resolve()
 	print(f"{dir_path}: {_sys_path_contains(dir_path)}")
