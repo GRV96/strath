@@ -42,6 +42,9 @@ faux (`False`), une exception `TypeError` est levée.
 Si l'argument `some_path` n'est pas `None` ni une instance de `str` ou de
 `pathlib.Path`, une exception `TypeError` est levée.
 
+Pour plus d'informations, consultez la documentation des fonctions et les démos
+dans le dépôt de code source.
+
 ### Démos
 
 `demos/demo_fnc_calls.py` contient des exemples d'appel des fonctions de
@@ -123,6 +126,9 @@ the functions return `None`. However, if `is_none_allowed` is `False`, a
 
 If argument `some_path` is not `None` nor an instance of `str` or
 `pathlib.Path`, a `TypeError` is raised.
+
+For more information, consult the functions' documentation and the demos in the
+source code repository.
 
 ### Demos
 
