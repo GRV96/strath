@@ -29,3 +29,10 @@ jobs:
         run: python3 demos/demo_str_to_pathlib.py demos/the_planets.txt
       - name: Test the pathlib to string demo
         run: python3 demos/demo_pathlib_to_str.py .. . .github/workflows demos strath tests
+  test_pypi_package_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      - name: Test the build
+        run: python3 .github/workflows/test_pypi_package_build.py
