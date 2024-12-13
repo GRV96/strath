@@ -52,14 +52,14 @@ python demos/demo_fnc_calls.py
 ```
 
 `demos/demo_pathlib_to_str.py` contient une fonction qui utilise une chaîne de
-caractères, mais ignore le type de son argument.
+caractères, mais ne connaît pas le type de son argument.
 
 ```
 python demos/demo_pathlib_to_str.py .. . .github/workflows demos strath tests
 ```
 
 `demos/demo_str_to_pathlib.py` contient une fonction qui utilise une instance
-de `pathlib.Path`, mais ignore le type de son argument.
+de `pathlib.Path`, mais ne connaît pas le type de son argument.
 
 ```
 python demos/demo_str_to_pathlib.py demos/the_planets.txt
