@@ -88,9 +88,9 @@ instance, the function returns the object.
 
 #### `ensure_path_is_str`
 
-If the object passed to this function is a `pathlib.Path` instance, this
+If the object passed to this function is a `pathlib.Path` instance, the
 function converts it to a string, which it returns. If the object is a string,
-this function returns the object.
+the function returns the object.
 
 #### Parameters and exception
 
