@@ -18,7 +18,7 @@ def _test_none_path(message, fnc, is_none_allowed):
 	print(message)
 	try:
 		none_path = fnc(None, is_none_allowed)
-		print(f"Return value: {none_path}")
+		print(f"Returned value: {none_path}")
 	except TypeError:
 		print("TypeError raised")
 
