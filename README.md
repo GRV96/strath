@@ -48,7 +48,7 @@ La démo contient des exemples d'appel des fonctions de `strath`. Exécutez-la
 avec la commande suivante.
 
 ```
-python demo/demo.py
+python demo/demo_fnc_calls.py
 ```
 
 ### Dépendances
@@ -116,7 +116,7 @@ The demo contains examples of calling `strath`'s functions. Run it with the
 following command.
 
 ```
-python demo/demo.py
+python demo/demo_fnc_calls.py
 ```
 
 ### Dependencies
