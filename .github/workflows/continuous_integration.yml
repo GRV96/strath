@@ -27,3 +27,5 @@ jobs:
         run: python3 demos/demo_fnc_calls.py
       - name: Test the string to pathlib demo
         run: python3 demos/demo_str_to_pathlib.py demos/the_planets.txt
+      - name: Test the pathlib to string demo
+        run: python3 demos/demo_pathlib_to_str.py .. . .github/workflows demos strath tests
