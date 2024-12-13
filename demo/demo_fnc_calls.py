@@ -8,6 +8,7 @@ from strath import\
 	ensure_path_is_pathlib,\
 	ensure_path_is_str
 sys.path.remove(repo_root)
+del repo_root
 
 
 _TITLE_PATH1 = "Path 1"
