@@ -2,10 +2,14 @@ import pytest
 
 import os
 from pathlib import Path
+import sys
 
+repo_root = str(Path(__file__).resolve().parents[1])
+sys.path.append(repo_root)
 from strath import\
 	ensure_path_is_pathlib,\
 	ensure_path_is_str
+sys.path.remove(repo_root)
 
 
 _ERROR_MSG =\
