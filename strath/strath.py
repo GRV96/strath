@@ -40,7 +40,7 @@ def ensure_path_is_pathlib(some_path, is_none_allowed):
 	Raises:
 		TypeError: if some_path is of a wrong type.
 	"""
-	if isinstance(some_path, Path) or is_none_allowed and some_path is None:
+	if isinstance(some_path, Path) or (is_none_allowed and some_path is None):
 		return some_path
 	elif isinstance(some_path, str):
 		return Path(some_path)
@@ -71,7 +71,7 @@ def ensure_path_is_str(some_path, is_none_allowed):
 	Raises:
 		TypeError: if some_path is of a wrong type.
 	"""
-	if isinstance(some_path, str) or is_none_allowed and some_path is None:
+	if isinstance(some_path, str) or (is_none_allowed and some_path is None):
 		return some_path
 	elif isinstance(some_path, Path):
 		return str(some_path)
