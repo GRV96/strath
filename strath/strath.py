@@ -1,7 +1,4 @@
-__all__ = [
-	"ensure_path_is_pathlib",
-	"ensure_path_is_str"
-]
+# __all__ declared at the module's end
 
 from pathlib import Path
 
@@ -77,3 +74,9 @@ def ensure_path_is_str(some_path, is_none_allowed):
 		return str(some_path)
 	else:
 		_raise_type_error(is_none_allowed)
+
+
+__all__ = [
+	ensure_path_is_pathlib.__name__,
+	ensure_path_is_str.__name__
+]
