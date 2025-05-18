@@ -37,12 +37,18 @@ def ensure_path_is_pathlib(some_path, is_none_allowed):
 	Raises:
 		TypeError: if some_path is of a wrong type.
 	"""
-	if isinstance(some_path, Path) or (is_none_allowed and some_path is None):
-		return some_path
-	elif isinstance(some_path, str):
-		return Path(some_path)
-	else:
+	if isinstance(some_path, str):
+		some_path = Path(some_path)
+
+	elif some_path is None:
+
+		if not is_none_allowed:
+			_raise_type_error(is_none_allowed)
+
+	elif not isinstance(some_path, Path):
 		_raise_type_error(is_none_allowed)
+
+	return some_path
 
 
 def ensure_path_is_str(some_path, is_none_allowed):
@@ -68,12 +74,18 @@ def ensure_path_is_str(some_path, is_none_allowed):
 	Raises:
 		TypeError: if some_path is of a wrong type.
 	"""
-	if isinstance(some_path, str) or (is_none_allowed and some_path is None):
-		return some_path
-	elif isinstance(some_path, Path):
-		return str(some_path)
-	else:
+	if isinstance(some_path, Path):
+		some_path = str(some_path)
+
+	elif some_path is None:
+
+		if not is_none_allowed:
+			_raise_type_error(is_none_allowed)
+
+	elif not isinstance(some_path, str):
 		_raise_type_error(is_none_allowed)
+
+	return some_path
 
 
 __all__ = [
