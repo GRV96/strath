@@ -15,11 +15,15 @@ _TITLE_PATH1 = "Path 1"
 _TITLE_PATH2 = "Path 2"
 
 
-def _print_path_and_type(message, some_path):
+def _print_path_and_type(message: str, some_path: Path | str) -> None:
 	print(f"{message}: {some_path} {type(some_path)}")
 
 
-def _test_none_path(message, fnc, is_none_allowed):
+def _test_none_path(
+		message: str,
+		fnc, # function
+		is_none_allowed: bool
+	) -> None:
 	print(message)
 	try:
 		none_path = fnc(None, is_none_allowed)
