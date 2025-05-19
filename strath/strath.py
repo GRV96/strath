@@ -3,9 +3,9 @@
 from pathlib import Path
 
 
-_ERROR_MSG =\
+_ERROR_MSG: str =\
 	"The path must be of type str or pathlib.Path. None is not allowed."
-_ERROR_MSG_NONE =\
+_ERROR_MSG_NONE: str =\
 	"The path must be None or of type str or pathlib.Path."
 
 

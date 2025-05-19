@@ -11,8 +11,8 @@ sys.path.remove(repo_root)
 del repo_root
 
 
-_TITLE_PATH1 = "Path 1"
-_TITLE_PATH2 = "Path 2"
+_TITLE_PATH1: str = "Path 1"
+_TITLE_PATH2: str = "Path 2"
 
 
 def _print_path_and_type(message: str, some_path: Path | str) -> None:
