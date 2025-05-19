@@ -8,9 +8,9 @@ sys.path.remove(repo_root)
 del repo_root
 
 
-def _print_file_content(file_path):
+def _print_file_content(file_path: Path | str) -> None:
 	# The type of file_path is uncertain.
-	file_path = ensure_path_is_pathlib(file_path, False)
+	file_path: Path = ensure_path_is_pathlib(file_path, False)
 	# We know file_path is a pathlib.Path instance.
 
 	file_path = file_path.resolve()
@@ -20,6 +20,6 @@ def _print_file_content(file_path):
 			print(line.strip())
 
 
-file_to_read = sys.argv[1]
+file_to_read: str = sys.argv[1]
 
 _print_file_content(file_to_read)

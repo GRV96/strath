@@ -3,18 +3,21 @@
 from pathlib import Path
 
 
-_ERROR_MSG =\
+_ERROR_MSG: str =\
 	"The path must be of type str or pathlib.Path. None is not allowed."
-_ERROR_MSG_NONE =\
+_ERROR_MSG_NONE: str =\
 	"The path must be None or of type str or pathlib.Path."
 
 
-def _raise_type_error(is_none_allowed):
+def _raise_type_error(is_none_allowed: bool) -> None:
 	message = _ERROR_MSG_NONE if is_none_allowed else _ERROR_MSG
 	raise TypeError(message)
 
 
-def ensure_path_is_pathlib(some_path, is_none_allowed):
+def ensure_path_is_pathlib(
+		some_path: Path | str | None,
+		is_none_allowed: bool
+	) -> Path:
 	"""
 	If argument some_path is a string, this function converts it to a
 	pathlib.Path instance, which it returns. If some_path is a pathlib.Path
@@ -28,8 +31,8 @@ def ensure_path_is_pathlib(some_path, is_none_allowed):
 	a TypeError is raised.
 
 	Parameters:
-		some_path (str or pathlib.Path): the path to a file or directory.
-		is_none_allowed (bool): determines whether some_path can be None.
+		some_path: the path to a file or directory.
+		is_none_allowed: determines whether some_path can be None.
 
 	Returns:
 		pathlib.Path: the path to a file or directory, possibly None.
@@ -51,7 +54,10 @@ def ensure_path_is_pathlib(some_path, is_none_allowed):
 	return some_path
 
 
-def ensure_path_is_str(some_path, is_none_allowed):
+def ensure_path_is_str(
+		some_path: Path | str | None,
+		is_none_allowed: bool
+	) -> str:
 	"""
 	If argument some_path is a pathlib.Path instance, this function converts
 	it to a string, which it returns. If some_path is a string, this function
@@ -65,8 +71,8 @@ def ensure_path_is_str(some_path, is_none_allowed):
 	a TypeError is raised.
 
 	Parameters:
-		some_path (str or pathlib.Path): the path to a file or directory.
-		is_none_allowed (bool): determines whether some_path can be None.
+		some_path: the path to a file or directory.
+		is_none_allowed: determines whether some_path can be None.
 
 	Returns:
 		str: the path to a file or directory, possibly None.
