@@ -44,7 +44,6 @@ def ensure_path_is_pathlib(
 		some_path = Path(some_path)
 
 	elif some_path is None:
-
 		if not is_none_allowed:
 			_raise_type_error(is_none_allowed)
 
@@ -84,7 +83,6 @@ def ensure_path_is_str(
 		some_path = str(some_path)
 
 	elif some_path is None:
-
 		if not is_none_allowed:
 			_raise_type_error(is_none_allowed)
 
