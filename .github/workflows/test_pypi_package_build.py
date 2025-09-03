@@ -1,16 +1,15 @@
+"""
+This script is meant to run on GitHub's virtual machine ubuntu-latest in a CI
+workflow. It builds the PyPI package and installs it to ensure the
+installation works. However, the script does not upload the package to PyPI.
+"""
+
+
 from os import system
 from pathlib import Path
 
 
-_REPO_ROOT = Path(__file__).resolve().parents[2]
-
-
-# This script is meant to run on GitHub's virtual machine ubuntu-latest in a CI
-# workflow. It builds the PyPI package and installs it to ensure the
-# installation works. However, the script does not upload the package to PyPI.
-
-system(f"python3 {_REPO_ROOT}/setup.py sdist")
-
-latest_dist = list((_REPO_ROOT/"dist").glob("strath-*.tar.gz"))[-1]
-
-system(f"pip3 install --no-cache-dir {latest_dist}")
+repo_root = Path(__file__).resolve().parents[2]
+system(f"python3 {repo_root}/setup.py sdist")
+src_dist = next((repo_root/"dist").glob("strath-*.tar.gz"))
+system(f"pip3 install --no-cache-dir {src_dist}")
