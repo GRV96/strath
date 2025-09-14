@@ -30,7 +30,7 @@ def ensure_path_is_pathlib(
 	If argument some_path is not None nor an instance of str or pathlib.Path,
 	a TypeError is raised.
 
-	Parameters:
+	Args:
 		some_path: the path to a file or directory.
 		is_none_allowed: determines whether some_path can be None.
 
@@ -69,7 +69,7 @@ def ensure_path_is_str(
 	If argument some_path is not None nor an instance of str or pathlib.Path,
 	a TypeError is raised.
 
-	Parameters:
+	Args:
 		some_path: the path to a file or directory.
 		is_none_allowed: determines whether some_path can be None.
 
