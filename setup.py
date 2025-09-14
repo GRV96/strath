@@ -38,7 +38,7 @@ if __name__ == "__main__":
 
 	setuptools.setup(
 		name = "strath",
-		version = "1.0.2",
+		version = "1.0.3",
 		author = "Guyllaume Rousseau",
 		description = short_desc,
 		long_description = long_desc,
@@ -49,10 +49,10 @@ if __name__ == "__main__":
 			"Intended Audience :: Developers",
 			"License :: OSI Approved :: MIT License",
 			"Operating System :: OS Independent",
-			"Programming Language :: Python :: 3",
-			"Topic :: Software Development :: Libraries :: Python Modules",
+			"Programming Language :: Python :: 3.6",
 			"Topic :: Utilities"
 		],
-		packages = setuptools.find_packages(exclude=(".github", "demos", "tests")),
+		packages = setuptools.find_packages(
+			exclude=(".github", "demos", "tests")),
 		license = "MIT",
 		license_files = ("LICENSE",))
