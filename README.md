@@ -47,25 +47,25 @@ dans le dépôt de code source.
 
 ### Démos
 
-`demos/demo_fnc_calls.py` contient des exemples d'appel des fonctions de
+`demos/demo1_fnc_calls.py` contient des exemples d'appel des fonctions de
 `strath`.
 
 ```
-python demos/demo_fnc_calls.py
+python demos/demo1_fnc_calls.py
 ```
 
-`demos/demo_pathlib_to_str.py` contient une fonction qui utilise une chaîne de
-caractères, mais ne connaît pas le type de son argument.
-
-```
-python demos/demo_pathlib_to_str.py .. . .github/workflows demos strath tests
-```
-
-`demos/demo_str_to_pathlib.py` contient une fonction qui utilise une instance
+`demos/demo2_str_to_pathlib.py` contient une fonction qui utilise une instance
 de `pathlib.Path`, mais ne connaît pas le type de son argument.
 
 ```
-python demos/demo_str_to_pathlib.py demos/the_planets.txt
+python demos/demo2_str_to_pathlib.py demos/the_planets.txt
+```
+
+`demos/demo3_pathlib_to_str.py` contient une fonction qui utilise une chaîne de
+caractères, mais ne connaît pas le type de son argument.
+
+```
+python demos/demo3_pathlib_to_str.py .. . .github/workflows demos strath tests
 ```
 
 ### Dépendances
@@ -132,24 +132,24 @@ source code repository.
 
 ### Demos
 
-`demos/demo_fnc_calls.py` contains examples of calling `strath`'s functions.
+`demos/demo1_fnc_calls.py` contains examples of calling `strath`'s functions.
 
 ```
-python demos/demo_fnc_calls.py
+python demos/demo1_fnc_calls.py
 ```
 
-`demos/demo_pathlib_to_str.py` contains a function that uses a string,
-but does not know its argument's type.
-
-```
-python demos/demo_pathlib_to_str.py .. . .github/workflows demos strath tests
-```
-
-`demos/demo_str_to_pathlib.py` contains a function that uses a `pathlib.Path`
+`demos/demo2_str_to_pathlib.py` contains a function that uses a `pathlib.Path`
 instance, but does not know its argument's type.
 
 ```
-python demos/demo_str_to_pathlib.py demos/the_planets.txt
+python demos/demo2_str_to_pathlib.py demos/the_planets.txt
+```
+
+`demos/demo3_pathlib_to_str.py` contains a function that uses a string,
+but does not know its argument's type.
+
+```
+python demos/demo3_pathlib_to_str.py .. . .github/workflows demos strath tests
 ```
 
 ### Dependencies
