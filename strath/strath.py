@@ -15,7 +15,7 @@ def _raise_type_error(is_none_allowed: bool) -> None:
 
 
 def ensure_path_is_pathlib(
-		some_path: Path | str | None,
+		some_path: str | Path | None,
 		is_none_allowed: bool
 	) -> Path | None:
 	"""
@@ -54,7 +54,7 @@ def ensure_path_is_pathlib(
 
 
 def ensure_path_is_str(
-		some_path: Path | str | None,
+		some_path: str | Path | None,
 		is_none_allowed: bool
 	) -> str | None:
 	"""
