@@ -18,14 +18,14 @@ fonction.
 #### `ensure_path_is_pathlib`
 
 Si le chemin est une chaîne de caractères, cette fonction le convertit en une
-instance de `pathlib.Path` et renvoie cette dernière. Si le chemin est une
+instance de `pathlib.Path` puis renvoie cette dernière. Si le chemin est une
 instance de `pathlib.Path`, la fonction renvoie le chemin.
 
 #### `ensure_path_is_str`
 
 Si le chemin est une instance de `pathlib.Path`, cette fonction le convertit en
-une chaîne de caractères et renvoie cette dernière. Si le chemin est une chaîne
-de caractères, la fonction renvoie le chemin.
+une chaîne de caractères puis renvoie cette dernière. Si le chemin est une
+chaîne de caractères, la fonction renvoie le chemin.
 
 #### Paramètres et exception `TypeError`
 
