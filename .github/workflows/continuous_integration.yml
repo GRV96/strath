@@ -14,6 +14,10 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
+      - name: Set up minimal Python version
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
       - name: Intall dependencies
         run: pip3 install --no-cache-dir -r requirements-dev.txt
       - name: Execute unit tests
@@ -23,6 +27,10 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
+      - name: Set up minimal Python version
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
       - name: Test the function call demo
         run: python3 demos/demo_fnc_calls.py
       - name: Test the string to pathlib demo
@@ -34,5 +42,9 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
+      - name: Set up minimal Python version
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
       - name: Test the build
         run: python3 .github/workflows/test_pypi_package_build.py
