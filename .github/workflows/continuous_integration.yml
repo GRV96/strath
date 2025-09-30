@@ -32,11 +32,11 @@ jobs:
         with:
           python-version: '3.10'
       - name: Test the function call demo
-        run: python3 demos/demo_fnc_calls.py
+        run: python3 demos/demo1_fnc_calls.py
       - name: Test the string to pathlib demo
-        run: python3 demos/demo_str_to_pathlib.py demos/the_planets.txt
+        run: python3 demos/demo2_str_to_pathlib.py demos/the_planets.txt
       - name: Test the pathlib to string demo
-        run: python3 demos/demo_pathlib_to_str.py .. . .github/workflows demos strath tests
+        run: python3 demos/demo3_pathlib_to_str.py .. . .github/workflows demos strath tests
   test_pypi_package_build:
     runs-on: ubuntu-latest
     steps:
