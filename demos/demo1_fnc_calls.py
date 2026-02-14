@@ -24,10 +24,10 @@ def _print_path_and_type(message: str, some_path: str | Path) -> None:
 
 
 def _test_none_path(
-		message: str,
-		tested_fnc: Callable[[Any | None, bool], Any | None],
-		is_none_allowed: bool
-	) -> None:
+	message: str,
+	tested_fnc: Callable[[Any | None, bool], Any | None],
+	is_none_allowed: bool
+) -> None:
 	print(message)
 	try:
 		none_path = tested_fnc(None, is_none_allowed)
