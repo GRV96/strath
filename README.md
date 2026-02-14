@@ -7,7 +7,7 @@ Cette bibliothèque aide à assurer qu'un chemin de fichier soit de type `str` o
 
 En Python, il est possible de représenter des chemins de fichier au moyen de
 chaînes de caractères (`str`) ou d'instances de `pathlib.Path`. Ces types
-étant employés de façons fort différentes, un développeur peut avoir besoin de
+étant employés de façons fort différentes, un programmeur peut avoir besoin de
 vérifier le type des objets et d'effectuer des conversions.
 
 La bibliothèque `strath` permet de faire ces deux tâches en un seul appel de
@@ -93,7 +93,7 @@ This library helps ensuring that a file path is of type `str` or
 
 In Python, it is possible to represent file paths with character strings
 (`str`) or `pathlib.Path` instances. Since these types are used in very
-different ways, a developer might need to verify the objects' type and to
+different ways, a programmer might need to verify the objects' type and to
 perform conversions.
 
 Library `strath` allows to do both tasks with one function call.
