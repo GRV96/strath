@@ -8,7 +8,7 @@ sys.path.remove(repo_root)
 del repo_root
 
 
-def _sys_path_contains(dir_path: Path | str) -> bool:
+def _sys_path_contains(dir_path: str | Path) -> bool:
 	# The type of dir_path is uncertain.
 	dir_path: str = ensure_path_is_str(dir_path, False)
 	# We know dir_path is a string.

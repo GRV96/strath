@@ -8,7 +8,7 @@ sys.path.remove(repo_root)
 del repo_root
 
 
-def _print_file_content(file_path: Path | str) -> None:
+def _print_file_content(file_path: str | Path) -> None:
 	# The type of file_path is uncertain.
 	file_path: Path = ensure_path_is_pathlib(file_path, False)
 	# We know file_path is a pathlib.Path instance.
