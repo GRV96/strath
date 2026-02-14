@@ -7,7 +7,7 @@ Cette bibliothèque aide à assurer qu'un chemin de fichier soit de type `str` o
 
 En Python, il est possible de représenter des chemins de fichier au moyen de
 chaînes de caractères (`str`) ou d'instances de `pathlib.Path`. Ces types
-étant employés de façons fort différentes, un développeur peut avoir besoin de
+étant employés de façons fort différentes, un programmeur peut avoir besoin de
 vérifier le type des objets et d'effectuer des conversions.
 
 La bibliothèque `strath` permet de faire ces deux tâches en un seul appel de
@@ -47,22 +47,22 @@ dans le dépôt de code source.
 
 ### Démos
 
-`demos/demo1_fnc_calls.py` contient des exemples d'appel des fonctions de
-`strath`.
+Dans `demos/demo1_fnc_calls.py`, les fonctions convertissent des chemins et
+traitent des valeurs `None`.
 
 ```
 python demos/demo1_fnc_calls.py
 ```
 
-`demos/demo2_str_to_pathlib.py` contient une fonction qui utilise une instance
-de `pathlib.Path`, mais ne connaît pas le type de son argument.
+Dans `demos/demo2_str_to_pathlib.py`, une fonction vérifie que le chemin est
+une instance de `pathlib.Path`.
 
 ```
 python demos/demo2_str_to_pathlib.py demos/the_planets.txt
 ```
 
-`demos/demo3_pathlib_to_str.py` contient une fonction qui utilise une chaîne de
-caractères, mais ne connaît pas le type de son argument.
+Dans `demos/demo3_pathlib_to_str.py`, une fonction vérifie que le chemin est
+une chaîne de caractères.
 
 ```
 python demos/demo3_pathlib_to_str.py .. . .github/workflows demos strath tests
@@ -93,7 +93,7 @@ This library helps ensuring that a file path is of type `str` or
 
 In Python, it is possible to represent file paths with character strings
 (`str`) or `pathlib.Path` instances. Since these types are used in very
-different ways, a developer might need to verify the objects' type and to
+different ways, a programmer might need to verify the objects' type and to
 perform conversions.
 
 Library `strath` allows to do both tasks with one function call.
@@ -132,21 +132,22 @@ source code repository.
 
 ### Demos
 
-`demos/demo1_fnc_calls.py` contains examples of calling `strath`'s functions.
+In `demos/demo1_fnc_calls.py`, the functions convert paths and process `None`
+values.
 
 ```
 python demos/demo1_fnc_calls.py
 ```
 
-`demos/demo2_str_to_pathlib.py` contains a function that uses a `pathlib.Path`
-instance, but does not know its argument's type.
+In `demos/demo2_str_to_pathlib.py`, a function verifies that the path is a
+`pathlib.Path` instance.
 
 ```
 python demos/demo2_str_to_pathlib.py demos/the_planets.txt
 ```
 
-`demos/demo3_pathlib_to_str.py` contains a function that uses a string,
-but does not know its argument's type.
+In `demos/demo3_pathlib_to_str.py`, a function verifies that the path is a
+string.
 
 ```
 python demos/demo3_pathlib_to_str.py .. . .github/workflows demos strath tests

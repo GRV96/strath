@@ -15,9 +15,9 @@ def _raise_type_error(is_none_allowed: bool) -> None:
 
 
 def ensure_path_is_pathlib(
-		some_path: str | Path | None,
-		is_none_allowed: bool
-	) -> Path | None:
+	some_path: str | Path | None,
+	is_none_allowed: bool
+) -> Path | None:
 	"""
 	If argument some_path is a string, this function converts it to a
 	pathlib.Path instance, which it returns. If some_path is a pathlib.Path
@@ -54,9 +54,9 @@ def ensure_path_is_pathlib(
 
 
 def ensure_path_is_str(
-		some_path: str | Path | None,
-		is_none_allowed: bool
-	) -> str | None:
+	some_path: str | Path | None,
+	is_none_allowed: bool
+) -> str | None:
 	"""
 	If argument some_path is a pathlib.Path instance, this function converts
 	it to a string, which it returns. If some_path is a string, this function

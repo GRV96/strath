@@ -1,6 +1,7 @@
 from pathlib import Path
 import sys
 
+
 repo_root = str(Path(__file__).resolve().parents[1])
 sys.path.insert(0, repo_root)
 from strath import ensure_path_is_str
@@ -8,7 +9,7 @@ sys.path.remove(repo_root)
 del repo_root
 
 
-def _sys_path_contains(dir_path: Path | str) -> bool:
+def _sys_path_contains(dir_path: str | Path) -> bool:
 	# The type of dir_path is uncertain.
 	dir_path: str = ensure_path_is_str(dir_path, False)
 	# We know dir_path is a string.

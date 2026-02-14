@@ -2,6 +2,10 @@ import os
 from pathlib import Path
 import sys
 
+from collections.abc import Callable
+from typing import Any
+
+
 repo_root = str(Path(__file__).resolve().parents[1])
 sys.path.insert(0, repo_root)
 from strath import\
@@ -15,18 +19,18 @@ _TITLE_PATH1: str = "Path 1"
 _TITLE_PATH2: str = "Path 2"
 
 
-def _print_path_and_type(message: str, some_path: Path | str) -> None:
+def _print_path_and_type(message: str, some_path: str | Path) -> None:
 	print(f"{message}: {some_path} {type(some_path)}")
 
 
 def _test_none_path(
-		message: str,
-		fnc, # function
-		is_none_allowed: bool
-	) -> None:
+	message: str,
+	tested_fnc: Callable[[Any | None, bool], Any | None],
+	is_none_allowed: bool
+) -> None:
 	print(message)
 	try:
-		none_path = fnc(None, is_none_allowed)
+		none_path = tested_fnc(None, is_none_allowed)
 		print(f"Returned value: {none_path}")
 	except TypeError:
 		print("TypeError raised")
