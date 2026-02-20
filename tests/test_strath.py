@@ -26,7 +26,7 @@ def test_str_is_strath() -> None:
 	assert isinstance(some_path, Strath)
 
 
-def test_path_is_strath() -> None:
+def test_pathlib_is_strath() -> None:
 	some_path = Path(__file__).resolve()
 	assert isinstance(some_path, Strath)
 
