@@ -15,6 +15,11 @@ fonction.
 
 ### Contenu
 
+#### Le type `Strath`
+
+`Strath` est un alias de type (`TypeAlias`) qui représente les chemins de
+fichier. Il correspond à `str | Path`.
+
 #### `ensure_path_is_pathlib`
 
 Si le chemin est une chaîne de caractères, cette fonction le convertit en une
@@ -99,6 +104,11 @@ perform conversions.
 Library `strath` allows to do both tasks with one function call.
 
 ### Content
+
+#### Type `Strath`
+
+`Strath` is a `TypeAlias` that represents file paths. It corresponds to
+`str | Path`.
 
 #### `ensure_path_is_pathlib`
 
