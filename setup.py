@@ -38,7 +38,7 @@ if __name__ == "__main__":
 
 	setuptools.setup(
 		name = "strath",
-		version = "1.0.4",
+		version = "1.1.0",
 		author = "Guyllaume Rousseau",
 		description = short_desc,
 		long_description = long_desc,
