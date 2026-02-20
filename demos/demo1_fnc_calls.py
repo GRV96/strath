@@ -9,6 +9,7 @@ from typing import Any
 repo_root = str(Path(__file__).resolve().parents[1])
 sys.path.insert(0, repo_root)
 from strath import\
+	Strath,\
 	ensure_path_is_pathlib,\
 	ensure_path_is_str
 sys.path.remove(repo_root)
@@ -19,7 +20,7 @@ _TITLE_PATH1: str = "Path 1"
 _TITLE_PATH2: str = "Path 2"
 
 
-def _print_path_and_type(message: str, some_path: str | Path) -> None:
+def _print_path_and_type(message: str, some_path: Strath) -> None:
 	print(f"{message}: {some_path} {type(some_path)}")
 
 
