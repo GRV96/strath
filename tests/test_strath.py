@@ -73,40 +73,48 @@ def test_str_to_str() -> None:
 
 
 def test_none_allowed_str() -> None:
-	none_path = ensure_path_is_str(None, True)
-	assert none_path is None
+	some_path = None
+	converted_path = ensure_path_is_str(some_path, True)
+	assert converted_path is None
 
 
 def test_none_disallowed_str() -> None:
+	some_path = None
 	with pytest.raises(TypeError, match=_ERROR_MSG):
-		ensure_path_is_str(None, False)
+		ensure_path_is_str(some_path, False)
 
 
 def test_none_allowed_pathlib() -> None:
-	none_path = ensure_path_is_pathlib(None, True)
-	assert none_path is None
+	some_path = None
+	converted_path = ensure_path_is_pathlib(some_path, True)
+	assert converted_path is None
 
 
 def test_none_disallowed_pathlib() -> None:
+	some_path = None
 	with pytest.raises(TypeError, match=_ERROR_MSG):
-		ensure_path_is_pathlib(None, False)
+		ensure_path_is_pathlib(some_path, False)
 
 
 def test_incorrect_type_none_allowed_str() -> None:
+	some_path = 3.14159
 	with pytest.raises(TypeError, match=_ERROR_MSG_NONE):
-		ensure_path_is_str(3.14159, True)
+		ensure_path_is_str(some_path, True)
 
 
 def test_incorrect_type_none_disallowed_str() -> None:
+	some_path = 3.14159
 	with pytest.raises(TypeError, match=_ERROR_MSG):
-		ensure_path_is_str(3.14159, False)
+		ensure_path_is_str(some_path, False)
 
 
 def test_incorrect_type_none_allowed_pathlib() -> None:
+	some_path = 3.14159
 	with pytest.raises(TypeError, match=_ERROR_MSG_NONE):
-		ensure_path_is_pathlib(3.14159, True)
+		ensure_path_is_pathlib(some_path, True)
 
 
 def test_incorrect_type_none_disallowed_pathlib() -> None:
+	some_path = 3.14159
 	with pytest.raises(TypeError, match=_ERROR_MSG):
-		ensure_path_is_pathlib(3.14159, False)
+		ensure_path_is_pathlib(some_path, False)
