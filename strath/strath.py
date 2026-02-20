@@ -1,6 +1,7 @@
 # __all__ declared at the module's end
 
 from pathlib import Path
+from typing import TypeAlias
 
 
 _ERROR_MSG: str =\
@@ -9,13 +10,19 @@ _ERROR_MSG_NONE: str =\
 	"The path must be None or of type str or pathlib.Path."
 
 
+Strath: TypeAlias = str | Path
+"""
+A type that represents file paths.
+"""
+
+
 def _raise_type_error(is_none_allowed: bool) -> None:
 	message = _ERROR_MSG_NONE if is_none_allowed else _ERROR_MSG
 	raise TypeError(message)
 
 
 def ensure_path_is_pathlib(
-	some_path: str | Path | None,
+	some_path: Strath | None,
 	is_none_allowed: bool
 ) -> Path | None:
 	"""
@@ -54,7 +61,7 @@ def ensure_path_is_pathlib(
 
 
 def ensure_path_is_str(
-	some_path: str | Path | None,
+	some_path: Strath | None,
 	is_none_allowed: bool
 ) -> str | None:
 	"""
@@ -93,6 +100,7 @@ def ensure_path_is_str(
 
 
 __all__ = [
+	"Strath",
 	ensure_path_is_pathlib.__name__,
 	ensure_path_is_str.__name__
 ]
