@@ -36,22 +36,13 @@ def test_not_strath() -> None:
 	assert not isinstance(some_path, Strath)
 
 
-def test_pathlib_to_pathlib() -> None:
-	some_path = Path(__file__).resolve()
-	converted_path = ensure_path_is_pathlib(some_path, False)
-
-	assert isinstance(converted_path, Path)
-	assert converted_path == some_path
-	assert converted_path is some_path
-
-
-def test_pathlib_to_str() -> None:
-	some_path = Path(__file__).resolve()
+def test_str_to_str() -> None:
+	some_path = os.path.abspath(__file__)
 	converted_path = ensure_path_is_str(some_path, False)
 
 	assert isinstance(converted_path, str)
-	assert Path(converted_path) == some_path
-	assert converted_path is not some_path
+	assert converted_path == some_path
+	assert converted_path is some_path
 
 
 def test_str_to_pathlib() -> None:
@@ -63,11 +54,20 @@ def test_str_to_pathlib() -> None:
 	assert converted_path is not some_path
 
 
-def test_str_to_str() -> None:
-	some_path = os.path.abspath(__file__)
+def test_pathlib_to_str() -> None:
+	some_path = Path(__file__).resolve()
 	converted_path = ensure_path_is_str(some_path, False)
 
 	assert isinstance(converted_path, str)
+	assert Path(converted_path) == some_path
+	assert converted_path is not some_path
+
+
+def test_pathlib_to_pathlib() -> None:
+	some_path = Path(__file__).resolve()
+	converted_path = ensure_path_is_pathlib(some_path, False)
+
+	assert isinstance(converted_path, Path)
 	assert converted_path == some_path
 	assert converted_path is some_path
 
