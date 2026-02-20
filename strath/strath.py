@@ -11,6 +11,9 @@ _ERROR_MSG_NONE: str =\
 
 
 Strath: TypeAlias = str | Path
+"""
+A type that represents file paths.
+"""
 
 
 def _raise_type_error(is_none_allowed: bool) -> None:
