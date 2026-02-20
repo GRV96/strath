@@ -8,6 +8,7 @@ import sys
 repo_root = str(Path(__file__).resolve().parents[1])
 sys.path.insert(0, repo_root)
 from strath import\
+	Strath,\
 	ensure_path_is_pathlib,\
 	ensure_path_is_str
 sys.path.remove(repo_root)
@@ -18,6 +19,21 @@ _ERROR_MSG =\
 	"The path must be of type str or pathlib.Path. None is not allowed."
 _ERROR_MSG_NONE =\
 	"The path must be None or of type str or pathlib.Path."
+
+
+def test_str_is_strath() -> None:
+	some_path = os.path.abspath(__file__)
+	assert isinstance(some_path, Strath)
+
+
+def test_path_is_strath() -> None:
+	some_path = Path(__file__).resolve()
+	assert isinstance(some_path, Strath)
+
+
+def test_not_strath() -> None:
+	some_path = 3.14159
+	assert not isinstance(some_path, Strath)
 
 
 def test_pathlib_to_pathlib() -> None:
